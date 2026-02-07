@@ -3,43 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propektus | Resmi Web Sitesi</title>
+    <title>Propektus | Official</title>
     <style>
-        body { background-color: #050505; color: #d1d1d1; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; line-height: 1.6; }
-        .container { max-width: 700px; text-align: center; padding: 20px; }
-        h1 { font-weight: 200; letter-spacing: 8px; color: #ffffff; margin-bottom: 10px; font-size: 2.5em; }
-        .quote { font-style: italic; color: #666; margin-bottom: 30px; font-size: 1.1em; border-bottom: 1px solid #222; padding-bottom: 20px; }
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 30px 0; border: 1px solid #1a1a1a; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #050505; color: #d1d1d1; font-family: 'Segoe UI', sans-serif; line-height: 1.6; overflow-x: hidden; }
+        
+        /* Navigasyon */
+        nav { position: fixed; top: 0; width: 100%; background: rgba(5, 5, 5, 0.9); padding: 20px; z-index: 1000; border-bottom: 1px solid #1a1a1a; }
+        .nav-container { max-width: 1000px; margin: auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 200; letter-spacing: 4px; color: #fff; text-decoration: none; font-size: 1.2em; }
+        .nav-links a { color: #888; text-decoration: none; margin-left: 20px; font-size: 0.9em; transition: 0.3s; }
+        .nav-links a:hover { color: #fff; }
+
+        /* Bölüm Ayarları */
+        section { min-height: 100vh; padding: 100px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .container { max-width: 800px; text-align: center; }
+        
+        h2 { font-weight: 200; letter-spacing: 5px; color: #fff; margin-bottom: 30px; text-transform: uppercase; }
+
+        /* Giriş Bölümü */
+        #home { background: radial-gradient(circle, #111 0%, #050505 100%); }
+        h1 { font-weight: 100; letter-spacing: 12px; color: #fff; font-size: 3em; margin-bottom: 10px; }
+
+        /* Video */
+        .video-wrapper { width: 100%; position: relative; padding-bottom: 56.25%; margin: 30px 0; border: 1px solid #1a1a1a; }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-        .about { margin: 30px 0; font-size: 1em; color: #999; }
+
+        /* Hakkında */
+        #about { background: #080808; }
+        .about-text { color: #999; font-size: 1.1em; max-width: 600px; margin: auto; }
+
+        /* İletişim & Linkler */
         .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 40px; }
-        .links a { color: #888; text-decoration: none; border: 1px solid #333; padding: 12px 25px; font-size: 0.9em; letter-spacing: 1px; transition: all 0.4s ease; }
-        .links a:hover { background: #ffffff; color: #000000; border-color: #ffffff; transform: translateY(-3px); }
-        footer { margin-top: 50px; font-size: 0.7em; color: #444; letter-spacing: 2px; }
+        .links a { color: #888; text-decoration: none; border: 1px solid #333; padding: 12px 25px; transition: all 0.4s; }
+        .links a:hover { background: #fff; color: #000; border-color: #fff; }
+
+        footer { padding: 40px; text-align: center; font-size: 0.7em; color: #444; letter-spacing: 2px; }
+        
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>PROPEKTUS</h1>
-        <p class="quote">"Görülen her şeyde O görünür..."</p>
-        
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/iTIUF4WU-Uc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
 
-        <div class="about">
-            <p>Varlığın ve yokluğun ötesinde bir ses yolculuğu. <br> 
-            Mistik dokular ve modern ezgilerin bir araya geldiği bir arayış.</p>
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">PROPEKTUS</a>
+            <div class="nav-links">
+                <a href="#home">Giriş</a>
+                <a href="#about">Hakkında</a>
+                <a href="#contact">İletişim</a>
+            </div>
         </div>
+    </nav>
 
-        <div class="links">
-            <a href="https://open.spotify.com/artist/your-id" target="_blank">SPOTIFY</a>
-            <a href="https://www.youtube.com/@propektusmusic" target="_blank">YOUTUBE</a>
-            <a href="https://music.apple.com" target="_blank">APPLE MUSIC</a>
-            <a href="https://www.instagram.com/propektus" target="_blank">INSTAGRAM</a>
+    <section id="home">
+        <div class="container">
+            <h1>PROPEKTUS</h1>
+            <p style="letter-spacing: 3px; color: #666;">"Görülen her şeyde O görünür..."</p>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/iTIUF4WU-Uc" allowfullscreen></iframe>
+            </div>
         </div>
+    </section>
 
-        <footer>© 2026 PROPEKTUS MUSIC</footer>
-    </div>
+    <section id="about">
+        <div class="container">
+            <h2>Hakkında</h2>
+            <div class="about-text">
+                <p>Propektus, 2026 yılında mistik dokuları modern elektronik tınılarla harmanlamak amacıyla doğmuş bir projedir. </p>
+                <br>
+                <p>Müziğimiz, sessizliğin içindeki derinliği ve evrenin görünmez bağlarını keşfetmeyi hedefler. Her nota, varlığın ve yokluğun ötesine uzanan bir yolculuğun parçasıdır.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>İletişim & Takip</h2>
+            <p>Yolculuğumuza ortak olun.</p>
+            <div class="links">
+                <a href="https://spotify.com" target="_blank">SPOTIFY</a>
+                <a href="https://youtube.com/@propektusmusic" target="_blank">YOUTUBE</a>
+                <a href="https://instagram.com/propektus" target="_blank">INSTAGRAM</a>
+                <a href="mailto:iletisim@propektus.com">E-POSTA</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>© 2026 PROPEKTUS MUSIC</footer>
+
 </body>
 </html>
